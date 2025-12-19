@@ -84,19 +84,36 @@ textarea {
    Author's custom styles 168,220,171 snygg grön
    ========================================================================== */
 
-  .logotyp {
-    display: flex;
-    height: auto;
-    width: 700px;
-    justify-content: flex-start;
-    margin-top: 30px;
-    margin-left: 30px;
-  }
+.header-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px 30px 0 30px; 
+}
 
-  .inloggning {
-    display: flex;
-    
-  }
+.logotyp {
+  height: auto;
+  width: 650px; 
+}
+
+.right-items {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+.inloggning, .prenumerera {
+  cursor: pointer;
+  border: solid black;
+  border-radius: 20%;
+  margin: 10px;
+  text-align: center;
+}
+
+
+
+
+  
 /* ==========================================================================
    Helper classes
    ========================================================================== */

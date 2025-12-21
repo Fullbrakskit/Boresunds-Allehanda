@@ -141,12 +141,14 @@ textarea {
   flex-direction: row; 
   gap: 40px;
   margin-left: 100px;
+  cursor: pointer;
 }
 
 .navbarHöger {
   display: flex;
   align-items: center;
   margin-left: 1200px ;
+  cursor: pointer;
 }
 
   

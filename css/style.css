@@ -151,6 +151,11 @@ textarea {
   cursor: pointer;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .centerkolumn-container {
   display: flex;
   flex-direction: column;
@@ -161,14 +166,18 @@ textarea {
 .artikel1 {
   margin-top: 60px;
   border-radius: 20px;
-  overflow: hidden; /* ensures the image corners are rounded */
-  width: 600px; /* set width on container */
+  overflow: hidden; 
+  width: 600px; 
 }
 
 .artikel1 img {
-  width: 100%;  /* image fills the div width */
+  width: 100%;  
   height: auto;
-  display: block; /* removes inline gap below image */
+  display: block; 
+}
+
+.vertReklam1 {
+  
 }
 
   

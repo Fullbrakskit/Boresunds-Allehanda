@@ -84,6 +84,7 @@ textarea {
    Author's custom styles 168,220,171 snygg grön
    ========================================================================== */
 
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -168,6 +169,8 @@ textarea {
   border-radius: 20px;
   overflow: hidden; 
   width: 600px; 
+  font-size: 40px;
+  cursor: pointer;
 }
 
 .artikel1 img {
@@ -176,8 +179,17 @@ textarea {
   display: block; 
 }
 
+.reklam1 {
+  width: 600px;
+  height: auto;
+  cursor: pointer;
+}
+
 .vertReklam1 {
-  
+  margin: 60px 0px 0px 100px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
   

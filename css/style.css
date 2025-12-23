@@ -154,7 +154,7 @@ textarea {
 
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Sätter huvudkolumnen och reklamkolumnen bredvid varandra */
 }
 
 .centerkolumn-container {
@@ -179,8 +179,23 @@ textarea {
   display: block; 
 }
 
+.artikel2 {
+  margin-top: 60px;
+  border-radius: 20px;
+  overflow: hidden; 
+  width: 600px; 
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.artikel2 img {
+  width: 100%;  
+  height: auto;
+  display: block; 
+}
+
 .reklam1 {
-  width: 600px;
+  width: 600px; 
   height: auto;
   cursor: pointer;
 }
@@ -191,6 +206,8 @@ textarea {
   overflow: hidden;
   cursor: pointer;
 }
+
+
 
   
 /* ==========================================================================

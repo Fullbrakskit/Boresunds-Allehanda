@@ -84,131 +84,198 @@ textarea {
    Author's custom styles 168,220,171 snygg grön
    ========================================================================== */
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background-color: #fafafa;
+}
 
 .header-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10px 30px 0 30px;
-  align-items: flex-start; 
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
 }
 
 .logotyp {
-  max-width: 100%;
+  width: clamp(120px, 20vw, 200px);
   height: auto;
-  width: 200px; 
   flex-shrink: 0;
 }
 
 .höger {
   display: flex;
-  gap: 15px;
-  margin-top: 10px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: flex-end;
-  width: 100%;
 }
 
-.inloggning, .prenumerera {
+.inloggning,
+.prenumerera {
   cursor: pointer;
   border-radius: 10px;
-  margin: 10px 0; 
-  text-align: center;
-  background-color: rgb(168, 220, 171); 
+  background-color: rgb(168, 220, 171);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px; 
-  padding: 0 15px; 
-  min-width: 100px; 
-  flex-shrink: 1; 
+  height: 40px;
+  padding: 0 15px;
+  min-width: 90px;
+  white-space: nowrap;
 }
 
-.container-centerkolumn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.inloggning p,
+.prenumerera p {
+  margin: 0;
 }
 
 .navbar {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 0 20px;
+  justify-content: space-between;
+  padding: 8px 20px;
   background-color: rgb(168, 220, 171);
-  margin-top: 40px;
-  font-size: larger;
+  margin-top: 20px;
+  font-size: 1rem;
   border-radius: 10px;
+  gap: 10px;
 }
 
 .navbarVänster {
   display: flex;
-  flex-direction: row; 
-  gap: 40px;
-  margin-left: 100px;
+  flex-wrap: wrap;
+  gap: 16px;
   cursor: pointer;
 }
 
+.navbarVänster p,
+.navbarHöger p {
+  margin: 0;
+}
+
 .navbarHöger {
-  display: flex;
-  align-items: center;
-  margin-left: 1150px ;
   cursor: pointer;
 }
 
 .main-container {
   display: flex;
-  flex-direction: row; /* Sätter huvudkolumnen och reklamkolumnen bredvid varandra */
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .centerkolumn-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 470px;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
-.artikel1 {
-  margin-top: 60px;
-  border-radius: 20px;
-  overflow: hidden; 
-  width: 600px; 
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.artikel1 img {
-  width: 100%;  
-  height: auto;
-  display: block; 
-}
-
+.artikel1,
 .artikel2 {
-  margin-top: 60px;
+  margin-top: 40px;
   border-radius: 20px;
-  overflow: hidden; 
-  width: 600px; 
-  font-size: 40px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   cursor: pointer;
 }
 
+.artikel1 img,
 .artikel2 img {
-  width: 100%;  
+  width: 100%;
   height: auto;
-  display: block; 
+  display: block;
+}
+
+.artikel1 p,
+.artikel2 p {
+  margin: 10px 0 0 0;
+  padding: 0 4px;
 }
 
 .reklam1 {
-  width: 600px; 
+  width: 100%;
+  max-width: 600px;
   height: auto;
   cursor: pointer;
+  margin-top: 20px;
+}
+
+.reklam1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.reklam1 p {
+  margin: 4px 0 0 0;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.reklamkolumn {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .vertReklam1 {
-  margin: 60px 0px 0px 100px;
+  margin-top: 40px;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
+}
+
+.vertReklam1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .höger {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .navbarVänster {
+    gap: 12px;
+  }
+
+  .artikel1,
+  .artikel2 {
+    font-size: 1.1rem;
+    margin-top: 24px;
+  }
+
+  .reklamkolumn {
+    flex-direction: column;
+  }
 }
 
 
